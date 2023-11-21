@@ -14,3 +14,12 @@ def get_todo_list(request):
     }
     return render(request, 'todo/todo_list.html', context)
 
+def open_page(request):
+    return render(request, 'todo/open_page.html')
+
+def home(request):
+    items = Item.objects.all()  
+    context = {
+        'items': items
+    }
+    return render(request, 'todo/todo_list.html', context)
