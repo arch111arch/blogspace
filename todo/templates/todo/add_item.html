@@ -11,7 +11,26 @@
     <h1>Add a new Todo item: </h1>
     <p>Add a new item below.</p>
     <hr>
-
+    <form method="post" action="add">
+        {% csrf_token %}
+        <div>
+            <p>
+                <label for="id_name">Name: </label>
+                <input type="text" id="id_name" name="item_name" />
+            </p>
+        </div>
+        <div>
+            <p>
+                <label for="id_done">Done: </label>
+                <input type="checkbox" id="id_done" name="done" />
+            </p>
+        </div>
+        <div>
+            <p>
+                <button type="submit">Add the new Item</button>
+            </p>
+        </div>
+    </form>
 </body>
 
 </html>
