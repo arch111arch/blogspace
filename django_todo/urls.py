@@ -15,15 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from todo.views import get_todo_list
-from todo.views import open_page
-from todo.views import home
+from todo.views import get_todo_list ,open_page, home, add_item
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', get_todo_list, name='get_todo_list'),
     path('open', open_page, name='open_page'),
-    path('home', home, name='home')
+    path('home', home, name='home'),
+    path('add', add_item, name='add_item')
 # takes 3 arguments.
 #The path the user types in. The function that returns. A name for the path.
 #'' empty string means our homepage.
