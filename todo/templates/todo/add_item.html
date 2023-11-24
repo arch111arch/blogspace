@@ -13,7 +13,8 @@
     <hr>
     <form method="post" action="add">
         {% csrf_token %}
-        {{ form }}
+        {{ form.as_p }}
+        <!--styling uses .as_p to format with paragraph tags.-->
         <div>
             <p>
                 <button type="submit">Add the new Item</button>
