@@ -18,11 +18,15 @@ def get_todo_list(request):
 
 def add_item(request):
     if request.method == 'POST':
-        name = request.POST.get('item_name')
-        done = 'done' in request.POST
-        Item.objects.create(name=name, done=done)
-
+       form = ItemForm(request.POST)
+       if form.is_valid():
+        form.save()
+        #checks if the data is ok and saves the form.
         return redirect('get_todo_list')
+            #name = request.POST.get('item_name')
+            #done = 'done' in request.POST
+            #Item.objects.create(name=name, done=done)
+        #the ItemForm creates the form instead.
     form = ItemForm()
     context = {
         'form': form
