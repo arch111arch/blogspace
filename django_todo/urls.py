@@ -22,8 +22,8 @@ urlpatterns = [
     path('', get_todo_list, name='get_todo_list'),
     path('open', open_page, name='open_page'),
     path('home', home, name='home'),
-    path('add', add_item, name='add_item'),
-    path('edit', edit_item, name='edit_item')
+    path('add', add_item, name='add'),
+    path('edit/<item_id>', edit_item, name='edit'),
 # takes 3 arguments.
 #The path the user types in. The function that returns. A name for the path.
 #'' empty string means our homepage.
