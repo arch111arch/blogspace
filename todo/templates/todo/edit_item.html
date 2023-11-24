@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit item</title>
+</head>
+
+<body>
+    <h1>Edit a todo Item </h1>
+    <p>Add a new item below.</p>
+    <hr>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <!--styling uses .as_p to format with paragraph tags.-->
+        <div>
+            <p>
+                <button type="submit">Update Item</button>
+            </p>
+        </div>
+    </form>
+</body>
+
+</html>
