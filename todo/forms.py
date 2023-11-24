@@ -3,7 +3,7 @@ from .models import Item
 
 
 #create a class that inherits django functionality
-class ItemForm(forms.Modelform):
+class ItemForm(forms.ModelForm):
     class Meta:
         model = Item
         fields = ['name', 'done']

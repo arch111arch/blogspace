@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Item
+from .forms import ItemForm
+
 
 # Create your views here.
 # Views are how the user comunicates from the frontend to the backend webpages.
@@ -21,7 +23,11 @@ def add_item(request):
         Item.objects.create(name=name, done=done)
 
         return redirect('get_todo_list')
-    return render(request, 'todo/add_item.html')
+    form = ItemForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'todo/add_item.html', context)
 
 def open_page(request):
     return render(request, 'todo/open_page.html')
