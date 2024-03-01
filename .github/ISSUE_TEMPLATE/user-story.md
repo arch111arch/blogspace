@@ -7,4 +7,4 @@ assignees: ''
 
 ---
 
-**As** a warehouse emplyee, **I can** select print-out sizes, while printing, so** I can **attach them to different parcel sizes.
+**As** role, **I can** perform task, so** I can ** achieve desired goal.
