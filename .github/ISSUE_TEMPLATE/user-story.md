@@ -8,3 +8,9 @@ assignees: ''
 ---
 
 **As** role, **I can** perform task, so** I can ** achieve desired goal.
+
+**ACCEPTANCE CRITERIA:**
+
+-Criteria one
+-Critera two
+-Criteria three
